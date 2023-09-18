@@ -42,3 +42,17 @@ CREATE TABLE "graduates" (
  12-DELETE FROM students WHERE students.Name="Layal"
  
 
+ //JOIN Part
+ 14-CREATE TABLE Result AS 
+SELECT employees.Name as employee_name,
+       companies.Name as company_name,
+	     companies.Date as company_date
+FROM  employees
+INNER JOIN companies
+ON employees.Company = companies.Name
+
+
+15-SELECT employee_name FROM Result WHERE company_date<2000
+
+16-SELECT Company FROM employees WHERE Role="Graphic Designer"
+
