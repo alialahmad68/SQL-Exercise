@@ -56,3 +56,21 @@ ON employees.Company = companies.Name
 
 16-SELECT Company FROM employees WHERE Role="Graphic Designer"
 
+18-SELECT students.Name
+   FROM students
+   WHERE Points = (SELECT MAX(Points) FROM students);
+
+19-SELECT avg(points) 
+   FROM students
+
+20-SELECT count(students.Name) 
+   FROM students
+   WHERE Points=500
+
+21-SELECT students.Name
+   FROM students
+   WHERE students.Name like "%s%"
+
+22-SELECT * 
+   FROM students
+   ORDER by Points DESC
